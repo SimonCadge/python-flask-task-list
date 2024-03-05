@@ -1,0 +1,25 @@
+GET http://localhost/tasks
+
+###
+
+POST http://localhost/task
+content-type: application/json
+
+{
+    "text": "買晚餐"
+}
+
+###
+
+PUT http://localhost/task/1
+Content-Type: application/json
+
+{
+    "text": "吃小籠包",
+    "status": 1,
+    "id": 1
+}
+
+###
+
+DELETE http://localhost/task/1
