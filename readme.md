@@ -1,10 +1,10 @@
-### todo:
- - upload to github
- - host online
-
 # Python Flask Task API
 This is my Task REST API, written in Python Flask and based on the problem definition found in problem-definition.md.  
 I have also added an Nginx reverse-proxy and the Flask-Migrate package for database migrations.  
+
+### DigitalOcean Hosted Address
+I'm hosting the API on a DigitalOcean droplet based in Sydney.  
+The ip address is http://170.64.218.21, and you can use the requests defined in `prod-scratch.http` to test it.  
 
 ### Running
 I have used Docker throughout development and deployment, so ensure you have Docker and Docker Compose installed.  
@@ -27,6 +27,7 @@ I have used Docker throughout development and deployment, so ensure you have Doc
  - pytest tests defined in `tests/test_tasks.py` to test happy paths and all potential errors
  - Two part Dockerfile which builds python wheels in the builder stage to keep the final stage as lean as possible
  - Docker images all using Alpine variants, ensuring they only contain exactly what they need to
+ - Prod deployment running live at http://170.64.218.21
 
 ### Note:
  - I used Flask 3.0.2, not 2.0.x. I believe the difference is negligible, and I'll happily rewrite it in 2.0.x if you like, but in a greenfield project I prefer to use up to date software.

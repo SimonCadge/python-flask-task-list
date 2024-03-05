@@ -1,0 +1,25 @@
+GET http://170.64.218.21/tasks
+
+###
+
+POST http://170.64.218.21/task
+content-type: application/json
+
+{
+    "text": "買晚餐"
+}
+
+###
+
+PUT http://170.64.218.21/task/1
+Content-Type: application/json
+
+{
+    "text": "吃小籠包",
+    "status": 1,
+    "id": 1
+}
+
+###
+
+DELETE http://170.64.218.21/task/1
